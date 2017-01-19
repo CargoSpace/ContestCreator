@@ -1,7 +1,7 @@
 module.exports = {
 	rpc : {
 		port: 80,
-		host: 'csc-dretnan.c9users.io', 
+		host: process.env.RPC_ENDPOINT || 'csc-dretnan.c9users.io', 
 		path: 'rpc/', 
 		strict: true,
 	},
