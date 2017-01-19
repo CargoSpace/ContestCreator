@@ -1,11 +1,12 @@
 {
   "name": "csc_remote",
   "version": "1.0.0",
-  "description": "Remote Control for Cargo Space Challenge",
+  "private": false,
+  "description": "Cargo Space Contest Creator",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "events": "^1.1.1",
