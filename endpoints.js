@@ -13,7 +13,8 @@ module.exports = function (app) {
 		res.status(200);
 		res.json({
 			start_time: app.next_contest, 
-			message: "Happy Coding Cargo Space Challengers (^-^)"
+			message: "Happy Coding Cargo Space Challengers (^-^)",
+			server_time: new Date().toLocaleDateString() + ", " + new Date().toLocaleTimeString(),
 		});
 	});
 
