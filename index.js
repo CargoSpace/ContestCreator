@@ -50,17 +50,8 @@ app.on('ticktock', function(){
 	var nextHour = lib.getUpperHour(hour_set, 
 		moment(moment.now()).hour());
 	var now = moment(moment.now()).clone();
-	year = now.year();
-	month = now.month();
-	day = now.date();
-	if(nextHour == 0){
-		day = day + 1;
-		if(month == 12) {
-			month = 1;
-			year++;
-		}
-	}
-	app.next_contest = year + '-' + month + 1 + '-' + day + ' ' + nextHour + ':00:' + '00';
+	if(nextHour == 0) now = moment(now).clone().add(1, 'day');
+	app.next_contest = now.year() + '-' + now.month() + 1 + '-' + now.date() + ' ' + nextHour + ':00:' + '00';
 });
 
 app.on('createst_created', function(response){
